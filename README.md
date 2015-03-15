@@ -1,2 +1,4 @@
-# SD-Coursework-III
-MSc HPC - Software Development - Coursework Part III - Refactoring and Reflection
+MSC in High Performance Computing
+Software Development
+Coursework Part III: Refactoring and Reflection
+
