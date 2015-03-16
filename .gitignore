@@ -1,0 +1,10 @@
+# MSc HPC
+# Performance Programming
+# Coursework
+# Exam no. B063622
+#
+# Git ignore list for top-level directory.
+#
+
+# OSX housekeeping.
+.DS_Store

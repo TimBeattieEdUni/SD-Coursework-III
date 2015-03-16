@@ -1,0 +1,14 @@
+# MSc HPC
+# Performance Programming
+# Coursework
+# Exam no. B063622
+#
+# Git ignore list for top-level directory.
+#
+
+# Output pickle files
+*.pickled
+!citiesAndDistances.pickled
+
+# Program output
+*.log
