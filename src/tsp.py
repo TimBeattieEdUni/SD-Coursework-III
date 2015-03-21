@@ -228,6 +228,11 @@ import traceback
 def main(argv):
     nm = 10
 
+    # check for optional random seed argument and apply if found
+    if 4 == len(argv):
+        seed = argv[3]
+        random.seed(seed)
+
     if len(argv) >= 3 and argv[0]:
         nm = int(argv[0])
 
