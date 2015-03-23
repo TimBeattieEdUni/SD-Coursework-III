@@ -1,0 +1,1529 @@
+diagnostics:
+4
+[[0, 2196, 2258, 439], [2170, 0, 480, 2191], [2232, 480, 0, 2222], [439, 2193, 2224, 0]]
+(end of diagnostics)
+4
+Repetition 0
+Average = 1220
+Tau0 = 0.000409836065574
+Colony Started
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 0
+Exploitation
+Exploration
+avg = 1.87959444688e-07
+p = 1.88864546347e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 1
+Exploration
+avg = 4.34909968281e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.84066230015e-07
+p = 1.86628445161e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 2
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 3
+Exploitation
+Exploration
+avg = 1.84066230015e-07
+p = 1.86628445161e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 4
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 5
+Exploitation
+Exploitation
+Exploitation
+Update called by 6
+Exploration
+avg = 4.34909968281e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.84066230015e-07
+p = 1.86628445161e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 7
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploitation
+Exploitation
+Exploitation
+Update called by 9
+Exploitation
+Exploitation
+Exploitation
+Update called by 10
+Exploitation
+Exploitation
+Exploitation
+Update called by 11
+Exploitation
+Exploration
+avg = 1.84031491462e-07
+p = 1.84444673976e-07
+Exploitation
+Update called by 12
+Exploration
+avg = 4.33899935859e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.85581278647e-07
+p = 1.86883750832e-07
+Exploitation
+Update called by 13
+Exploitation
+Exploration
+avg = 1.85581278647e-07
+p = 1.86883750832e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 14
+Exploitation
+Exploitation
+Exploitation
+Update called by 15
+Exploitation
+Exploration
+avg = 1.85581278647e-07
+p = 1.86883750832e-07
+Exploitation
+Update called by 16
+Exploration
+avg = 4.09914675329e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploitation
+Exploration
+avg = 1.84031491462e-07
+p = 1.84444673976e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 1, 5333
+Exploitation
+Exploration
+avg = 1.69163500219e-07
+p = 1.69978091713e-07
+Exploration
+avg = 8.40210612794e-07
+Update called by 0
+Exploration
+avg = 3.94742665369e-07
+p = 8.52971311475e-07
+Exploration
+avg = 1.78512295263e-07
+p = 1.88675681801e-07
+Exploration
+avg = 9.32633780201e-07
+Update called by 1
+Exploitation
+Exploitation
+Exploitation
+Update called by 2
+Exploration
+avg = 4.27784480658e-07
+p = 9.33558011875e-07
+Exploration
+avg = 1.67023150783e-07
+p = 1.68195375748e-07
+Exploration
+avg = 8.52971311475e-07
+Update called by 3
+Exploration
+avg = 4.28393857699e-07
+p = 9.32633780201e-07
+Exploration
+avg = 1.74897715049e-07
+p = 1.86441816716e-07
+Exploration
+avg = 8.53816598361e-07
+Update called by 4
+Exploitation
+Exploitation
+Exploitation
+Update called by 5
+Exploration
+avg = 4.28705015696e-07
+p = 9.33567254192e-07
+Exploitation
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploitation
+Exploitation
+Exploitation
+Update called by 7
+Exploration
+avg = 4.28705046812e-07
+p = 9.33567347539e-07
+Exploration
+avg = 1.74991029271e-07
+p = 1.86628445159e-07
+Exploitation
+Update called by 8
+Exploration
+avg = 4.27849770912e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.76273896449e-07
+p = 1.86696867081e-07
+Exploitation
+Update called by 9
+Exploration
+avg = 3.95024427664e-07
+p = 8.53816598361e-07
+Exploitation
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploration
+avg = 3.95027245287e-07
+p = 8.5382505123e-07
+Exploration
+avg = 1.78606718093e-07
+p = 1.88864527461e-07
+Exploitation
+Update called by 11
+Exploitation
+Exploration
+avg = 1.65628342316e-07
+p = 1.66000206578e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 12
+Exploitation
+Exploitation
+Exploitation
+Update called by 13
+Exploitation
+Exploitation
+Exploitation
+Update called by 14
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 15
+Exploration
+avg = 4.2784980203e-07
+p = 9.33567347548e-07
+Exploitation
+Exploitation
+Update called by 16
+Exploration
+avg = 4.03679530498e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 17
+Exploration
+avg = 4.03679530498e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.74850566793e-07
+p = 1.84444655531e-07
+Exploitation
+Update called by 18
+Exploration
+avg = 4.03679530498e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.74850575923e-07
+p = 1.84444673791e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 2, 5333
+Exploration
+avg = 3.61057886336e-07
+p = 7.68442622182e-07
+Exploration
+avg = 1.60746054698e-07
+p = 1.69978091543e-07
+Exploitation
+Update called by 0
+Exploitation
+Exploration
+avg = 1.70094849826e-07
+p = 1.88675681799e-07
+Exploitation
+Update called by 1
+Exploration
+avg = 3.85890607258e-07
+p = 8.40210612794e-07
+Exploration
+avg = 1.57491926344e-07
+p = 1.67965600645e-07
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploration
+avg = 4.22339360212e-07
+p = 9.33558011875e-07
+Exploitation
+Exploitation
+Update called by 3
+Exploitation
+Exploitation
+Exploitation
+Update called by 4
+Exploration
+avg = 4.2317357073e-07
+p = 9.33558011875e-07
+Exploitation
+Exploitation
+Update called by 5
+Exploration
+avg = 4.23176651503e-07
+p = 9.33567254192e-07
+Exploitation
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploration
+avg = 4.2317668231e-07
+p = 9.33567346615e-07
+Exploration
+avg = 1.66823348509e-07
+p = 1.86628444974e-07
+Exploitation
+Update called by 7
+Exploitation
+Exploitation
+Exploitation
+Update called by 8
+Exploration
+avg = 4.22404650466e-07
+p = 9.33567254192e-07
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 9
+Exploration
+avg = 3.89515878395e-07
+p = 8.53816598361e-07
+Exploitation
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploration
+avg = 3.89518696018e-07
+p = 8.5382505123e-07
+Exploration
+avg = 1.70189272657e-07
+p = 1.88864527461e-07
+Exploitation
+Update called by 11
+Exploration
+avg = 3.98067900208e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 12
+Exploration
+avg = 4.22404681584e-07
+p = 9.33567347548e-07
+Exploitation
+Exploitation
+Update called by 13
+Exploitation
+Exploitation
+Exploitation
+Update called by 14
+Exploitation
+Exploitation
+Exploitation
+Update called by 15
+Exploitation
+Exploration
+avg = 1.6807479194e-07
+p = 1.86883750645e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 16
+Exploitation
+Exploration
+avg = 1.66586829889e-07
+p = 1.84442829529e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploration
+avg = 3.98067900208e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 18
+Exploitation
+Exploitation
+Exploitation
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 3, 5333
+Exploration
+avg = 3.56100191994e-07
+p = 7.68442622182e-07
+Exploitation
+Exploitation
+Update called by 0
+Exploitation
+Exploration
+avg = 1.62519148933e-07
+p = 1.88675681799e-07
+Exploration
+avg = 9.32633780201e-07
+Update called by 1
+Exploitation
+Exploitation
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploration
+avg = 4.1743875181e-07
+p = 9.33558011875e-07
+Exploration
+avg = 1.51267312829e-07
+p = 1.68195375747e-07
+Exploitation
+Update called by 3
+Exploitation
+Exploitation
+Exploitation
+Update called by 4
+Exploration
+avg = 4.18198042956e-07
+p = 9.33558011875e-07
+Exploration
+avg = 1.59471502858e-07
+p = 1.86626578877e-07
+Exploitation
+Update called by 5
+Exploration
+avg = 4.18201123728e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.59472426669e-07
+p = 1.86628426498e-07
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploitation
+Exploration
+avg = 1.59472435907e-07
+p = 1.86628444974e-07
+Exploitation
+Update called by 7
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploitation
+Exploration
+avg = 1.60518058496e-07
+p = 1.86696867081e-07
+Exploitation
+Update called by 9
+Exploitation
+Exploration
+avg = 1.62612636885e-07
+p = 1.88862657702e-07
+Exploitation
+Update called by 10
+Exploration
+avg = 3.84561001677e-07
+p = 8.5382505123e-07
+Exploitation
+Exploitation
+Update called by 11
+Exploration
+avg = 3.93017432946e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.499289769e-07
+p = 1.66000206576e-07
+Exploitation
+Update called by 12
+Exploration
+avg = 4.17504073183e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.60610565953e-07
+p = 1.86881881994e-07
+Exploitation
+Update called by 13
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 14
+Exploitation
+Exploitation
+Exploitation
+Update called by 15
+Exploitation
+Exploitation
+Exploitation
+Update called by 16
+Exploration
+avg = 3.93017432946e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploration
+avg = 3.93017432946e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.59151201377e-07
+p = 1.84444655531e-07
+Exploitation
+Update called by 18
+Exploration
+avg = 3.93017432946e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.59151210507e-07
+p = 1.84444673791e-07
+Exploitation
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 4, 5333
+Exploration
+avg = 3.51638267087e-07
+p = 7.68442622182e-07
+Exploitation
+Exploration
+avg = 8.40210612794e-07
+Update called by 0
+Exploitation
+Exploitation
+Exploitation
+Update called by 1
+Exploration
+avg = 3.76437104487e-07
+p = 8.40210612794e-07
+Exploitation
+Exploitation
+Update called by 2
+Exploration
+avg = 4.13028204249e-07
+p = 9.33558011875e-07
+Exploration
+avg = 1.44550350334e-07
+p = 1.68195375747e-07
+Exploitation
+Update called by 3
+Exploitation
+Exploration
+avg = 1.52763300436e-07
+p = 1.86441816716e-07
+Exploration
+avg = 8.53816598361e-07
+Update called by 4
+Exploitation
+Exploitation
+Exploitation
+Update called by 5
+Exploitation
+Exploration
+avg = 1.52856605327e-07
+p = 1.86628426498e-07
+Exploitation
+Update called by 6
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136603e-07
+Update called by 7
+Exploitation
+Exploration
+avg = 1.52856614657e-07
+p = 1.86628445159e-07
+Exploitation
+Update called by 8
+Exploration
+avg = 4.13093494503e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.53801096001e-07
+p = 1.86696867081e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 9
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347539e-07
+Update called by 11
+Exploitation
+Exploration
+avg = 1.43236089539e-07
+p = 1.66000206576e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 12
+Exploitation
+Exploration
+avg = 1.53893603457e-07
+p = 1.86881881994e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 13
+Exploitation
+Exploration
+avg = 1.53894528532e-07
+p = 1.86883732143e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 14
+Exploration
+avg = 3.8847201241e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 15
+Exploration
+avg = 4.13093525622e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.53894537783e-07
+p = 1.86883750645e-07
+Exploitation
+Update called by 16
+Exploitation
+Exploitation
+Exploitation
+Update called by 17
+Exploration
+avg = 3.8847201241e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploitation
+Exploration
+avg = 1.52458323146e-07
+p = 1.84444673791e-07
+Exploitation
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 5, 5333
+Exploitation
+Exploitation
+Exploitation
+Update called by 0
+Exploration
+avg = 3.75798764432e-07
+p = 8.52971311468e-07
+Exploitation
+Exploration
+avg = 9.32633780201e-07
+Update called by 1
+Exploitation
+Exploration
+avg = 1.37570953192e-07
+p = 1.67965600645e-07
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploitation
+Exploration
+avg = 1.38505084088e-07
+p = 1.68195375747e-07
+Exploitation
+Update called by 3
+Exploitation
+Exploration
+avg = 1.46809061228e-07
+p = 1.86441816716e-07
+Exploitation
+Update called by 4
+Exploration
+avg = 4.09689890461e-07
+p = 9.33558011875e-07
+Exploitation
+Exploitation
+Update called by 5
+Exploration
+avg = 4.09692971234e-07
+p = 9.33567254192e-07
+Exploitation
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136603e-07
+Update called by 7
+Exploration
+avg = 4.09693002349e-07
+p = 9.33567347539e-07
+Exploration
+avg = 1.4690237545e-07
+p = 1.86628445159e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploration
+avg = 4.09124001698e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.47755829755e-07
+p = 1.86696867081e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 9
+Exploitation
+Exploration
+avg = 1.49658188358e-07
+p = 1.88862657702e-07
+Exploitation
+Update called by 10
+Exploitation
+Exploitation
+Exploitation
+Update called by 11
+Exploitation
+Exploration
+avg = 1.37212490914e-07
+p = 1.66000206576e-07
+Exploitation
+Update called by 12
+Exploration
+avg = 4.09124032816e-07
+p = 9.33567347548e-07
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 13
+Exploration
+avg = 4.09124032816e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.47849262286e-07
+p = 1.86883732143e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 14
+Exploration
+avg = 3.84381133928e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.46342502276e-07
+p = 1.84260229302e-07
+Exploitation
+Update called by 15
+Exploitation
+Exploitation
+Exploitation
+Update called by 16
+Exploration
+avg = 3.84381133928e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 17
+Exploration
+avg = 3.84381133928e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 18
+Exploitation
+Exploration
+avg = 1.46434724521e-07
+p = 1.84444673791e-07
+Exploitation
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 6, 5333
+Exploitation
+Exploration
+avg = 1.34693219328e-07
+p = 1.69978091543e-07
+Exploitation
+Update called by 0
+Exploration
+avg = 3.72184605257e-07
+p = 8.52971311468e-07
+Exploration
+avg = 1.44042014456e-07
+p = 1.88675681799e-07
+Exploitation
+Update called by 1
+Exploitation
+Exploration
+avg = 1.32212137905e-07
+p = 1.67965600645e-07
+Exploitation
+Update called by 2
+Exploitation
+Exploitation
+Exploitation
+Update called by 3
+Exploration
+avg = 4.05754653489e-07
+p = 9.32633780201e-07
+Exploration
+avg = 1.41450245941e-07
+p = 1.86441816716e-07
+Exploitation
+Update called by 4
+Exploration
+avg = 4.06062730714e-07
+p = 9.33558011875e-07
+Exploration
+avg = 1.41542627021e-07
+p = 1.86626578877e-07
+Exploitation
+Update called by 5
+Exploitation
+Exploration
+avg = 1.41543550832e-07
+p = 1.86628426498e-07
+Exploitation
+Update called by 6
+Exploration
+avg = 4.06065842294e-07
+p = 9.33567346615e-07
+Exploitation
+Exploitation
+Update called by 7
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploitation
+Exploration
+avg = 1.42315090133e-07
+p = 1.86696867081e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 9
+Exploitation
+Exploitation
+Exploitation
+Update called by 10
+Exploitation
+Exploration
+avg = 1.44136437287e-07
+p = 1.88864527461e-07
+Exploration
+avg = 9.33567347539e-07
+Update called by 11
+Exploration
+avg = 3.80699343295e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 12
+Exploitation
+Exploration
+avg = 1.4240759759e-07
+p = 1.86881881994e-07
+Exploitation
+Update called by 13
+Exploitation
+Exploration
+avg = 1.42408522664e-07
+p = 1.86883732143e-07
+Exploitation
+Update called by 14
+Exploitation
+Exploitation
+Exploitation
+Update called by 15
+Exploitation
+Exploitation
+Exploitation
+Update called by 16
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploration
+avg = 3.80699343295e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 7, 5333
+Exploitation
+Exploitation
+Exploitation
+Update called by 0
+Exploration
+avg = 3.68931861999e-07
+p = 8.52971311468e-07
+Exploitation
+Exploitation
+Update called by 1
+Exploration
+avg = 3.65515323469e-07
+p = 8.40210612794e-07
+Exploration
+avg = 1.27389204147e-07
+p = 1.67965600645e-07
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploration
+avg = 4.02270878747e-07
+p = 9.33558011875e-07
+Exploitation
+Exploration
+avg = 8.52971311475e-07
+Update called by 3
+Exploration
+avg = 4.02490209716e-07
+p = 9.32633780201e-07
+Exploitation
+Exploration
+avg = 8.53816598361e-07
+Update called by 4
+Exploitation
+Exploitation
+Exploration
+avg = 8.5382505123e-07
+Update called by 5
+Exploitation
+Exploration
+avg = 1.36720617074e-07
+p = 1.86628426498e-07
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploration
+avg = 4.02801398521e-07
+p = 9.33567346615e-07
+Exploration
+avg = 1.36720626312e-07
+p = 1.86628444974e-07
+Exploitation
+Update called by 7
+Exploration
+avg = 4.02801398829e-07
+p = 9.33567347539e-07
+Exploration
+avg = 1.36720626404e-07
+p = 1.86628445159e-07
+Exploitation
+Update called by 8
+Exploration
+avg = 4.02336169001e-07
+p = 9.33567254192e-07
+Exploitation
+Exploitation
+Update called by 9
+Exploration
+avg = 3.69213624297e-07
+p = 8.53816598361e-07
+Exploitation
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploitation
+Exploration
+avg = 1.39166019931e-07
+p = 1.88864527461e-07
+Exploitation
+Update called by 11
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 12
+Exploitation
+Exploration
+avg = 1.37510931931e-07
+p = 1.86881881994e-07
+Exploitation
+Update called by 13
+Exploration
+avg = 4.0233620012e-07
+p = 9.33567347548e-07
+Exploitation
+Exploitation
+Update called by 14
+Exploitation
+Exploitation
+Exploitation
+Update called by 15
+Exploitation
+Exploration
+avg = 1.37511866256e-07
+p = 1.86883750645e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 16
+Exploration
+avg = 3.77385731724e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.36133448741e-07
+p = 1.84442829529e-07
+Exploitation
+Update called by 17
+Exploration
+avg = 3.77385731724e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.36134361742e-07
+p = 1.84444655531e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploitation
+Exploration
+avg = 1.36134370872e-07
+p = 1.84444673791e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 8, 5333
+Exploration
+avg = 3.37828163306e-07
+p = 7.68442622182e-07
+Exploitation
+Exploitation
+Update called by 0
+Exploitation
+Exploitation
+Exploration
+avg = 9.32633780201e-07
+Update called by 1
+Exploitation
+Exploitation
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploitation
+Exploration
+avg = 1.23760679714e-07
+p = 1.68195375747e-07
+Exploitation
+Update called by 3
+Exploration
+avg = 3.99552210321e-07
+p = 9.32633780201e-07
+Exploitation
+Exploitation
+Update called by 4
+Exploitation
+Exploration
+avg = 1.32379052881e-07
+p = 1.86626578877e-07
+Exploitation
+Update called by 5
+Exploration
+avg = 3.99863368318e-07
+p = 9.33567254192e-07
+Exploitation
+Exploitation
+Update called by 6
+Exploitation
+Exploration
+avg = 1.32379985929e-07
+p = 1.86628444974e-07
+Exploration
+avg = 8.53825136603e-07
+Update called by 7
+Exploration
+avg = 3.99863399433e-07
+p = 9.33567347539e-07
+Exploitation
+Exploitation
+Update called by 8
+Exploitation
+Exploration
+avg = 1.33011425381e-07
+p = 1.86696867081e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 9
+Exploitation
+Exploration
+avg = 1.34691709432e-07
+p = 1.88862657702e-07
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347539e-07
+Update called by 11
+Exploitation
+Exploitation
+Exploitation
+Update called by 12
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 13
+Exploitation
+Exploitation
+Exploitation
+Update called by 14
+Exploration
+avg = 3.74403481311e-07
+p = 8.53825136612e-07
+Exploration
+avg = 1.3165094523e-07
+p = 1.84260229302e-07
+Exploitation
+Update called by 15
+Exploration
+avg = 3.99442439865e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.33104867163e-07
+p = 1.86883750645e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 16
+Exploration
+avg = 3.74403481311e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 17
+Exploration
+avg = 3.74403481311e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploitation
+Exploitation
+Exploitation
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 9, 5333
+Exploration
+avg = 3.35193441267e-07
+p = 7.68442622182e-07
+Exploitation
+Exploitation
+Update called by 0
+Exploitation
+Exploitation
+Exploitation
+Update called by 1
+Exploitation
+Exploitation
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploitation
+Exploitation
+Exploration
+avg = 8.52971311475e-07
+Update called by 3
+Exploitation
+Exploitation
+Exploitation
+Update called by 4
+Exploration
+avg = 3.97216088089e-07
+p = 9.33558011875e-07
+Exploitation
+Exploitation
+Update called by 5
+Exploration
+avg = 3.97219168862e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.28473400347e-07
+p = 1.86628426498e-07
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploitation
+Exploration
+avg = 1.28473409585e-07
+p = 1.86628444974e-07
+Exploitation
+Update called by 7
+Exploitation
+Exploration
+avg = 1.28473409678e-07
+p = 1.86628445159e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploitation
+Exploitation
+Exploitation
+Update called by 9
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploration
+avg = 3.63654250949e-07
+p = 8.5382505123e-07
+Exploration
+avg = 1.30666606253e-07
+p = 1.88864527461e-07
+Exploitation
+Update called by 11
+Exploitation
+Exploitation
+Exploitation
+Update called by 12
+Exploration
+avg = 3.96838055635e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.29137633653e-07
+p = 1.86881881994e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 13
+Exploitation
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 14
+Exploration
+avg = 3.71719455939e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 15
+Exploitation
+Exploration
+avg = 1.29138567978e-07
+p = 1.86883750645e-07
+Exploitation
+Update called by 16
+Exploration
+avg = 3.71719455939e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploration
+avg = 3.71719455939e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploration
+avg = 3.71719455939e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 10, 5333
+Exploitation
+Exploitation
+Exploration
+avg = 8.40210612794e-07
+Update called by 0
+Exploitation
+Exploitation
+Exploitation
+Update called by 1
+Exploration
+avg = 3.57553345107e-07
+p = 8.40210612794e-07
+Exploration
+avg = 1.15626068711e-07
+p = 1.67965600645e-07
+Exploration
+avg = 7.68442622951e-07
+Update called by 2
+Exploration
+avg = 3.94428788456e-07
+p = 9.33558011875e-07
+Exploitation
+Exploration
+avg = 8.52971311475e-07
+Update called by 3
+Exploitation
+Exploration
+avg = 1.24864176746e-07
+p = 1.86441816716e-07
+Exploitation
+Update called by 4
+Exploitation
+Exploration
+avg = 1.24956557826e-07
+p = 1.86626578877e-07
+Exploitation
+Update called by 5
+Exploitation
+Exploration
+avg = 1.24957481637e-07
+p = 1.86628426498e-07
+Exploitation
+Update called by 6
+Exploitation
+Exploitation
+Exploitation
+Update called by 7
+Exploration
+avg = 3.94839420467e-07
+p = 9.33567347539e-07
+Exploitation
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploitation
+Exploitation
+Exploitation
+Update called by 9
+Exploration
+avg = 3.61280183492e-07
+p = 8.53816598361e-07
+Exploitation
+Exploration
+avg = 9.33567346615e-07
+Update called by 10
+Exploitation
+Exploration
+avg = 1.27043172001e-07
+p = 1.88864527461e-07
+Exploration
+avg = 9.33567347539e-07
+Update called by 11
+Exploration
+avg = 3.69303833104e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 12
+Exploitation
+Exploration
+avg = 1.25567964388e-07
+p = 1.86881881994e-07
+Exploitation
+Update called by 13
+Exploration
+avg = 3.94494109829e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.25568889462e-07
+p = 1.86883732143e-07
+Exploitation
+Update called by 14
+Exploitation
+Exploration
+avg = 1.2414198742e-07
+p = 1.84260229302e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 15
+Exploration
+avg = 3.94494109829e-07
+p = 9.33567347548e-07
+Exploration
+avg = 1.25568898713e-07
+p = 1.86883750645e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 16
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploration
+avg = 3.69303833104e-07
+p = 8.53825136612e-07
+Exploitation
+Exploitation
+Update called by 18
+Exploitation
+Exploration
+avg = 1.24234209665e-07
+p = 1.84444673791e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 11, 5333
+Exploration
+avg = 3.30688066581e-07
+p = 7.68442622182e-07
+Exploitation
+Exploration
+avg = 8.40210612794e-07
+Update called by 0
+Exploitation
+Exploitation
+Exploitation
+Update called by 1
+Exploitation
+Exploitation
+Exploitation
+Update called by 2
+Exploration
+avg = 3.9231923723e-07
+p = 9.33558011875e-07
+Exploitation
+Exploration
+avg = 8.52971311475e-07
+Update called by 3
+Exploitation
+Exploration
+avg = 1.21699849907e-07
+p = 1.86441816716e-07
+Exploitation
+Update called by 4
+Exploitation
+Exploitation
+Exploration
+avg = 8.5382505123e-07
+Update called by 5
+Exploration
+avg = 3.92697587792e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.21793154798e-07
+p = 1.86628426498e-07
+Exploration
+avg = 8.53825135758e-07
+Update called by 6
+Exploration
+avg = 3.926976186e-07
+p = 9.33567346615e-07
+Exploitation
+Exploitation
+Update called by 7
+Exploitation
+Exploration
+avg = 1.21793164129e-07
+p = 1.86628445159e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 8
+Exploration
+avg = 3.92384527484e-07
+p = 9.33567254192e-07
+Exploration
+avg = 1.22262754592e-07
+p = 1.86696867081e-07
+Exploitation
+Update called by 9
+Exploration
+avg = 3.5914605864e-07
+p = 8.53816598361e-07
+Exploitation
+Exploitation
+Update called by 10
+Exploration
+avg = 3.59148876263e-07
+p = 8.5382505123e-07
+Exploration
+avg = 1.23782081174e-07
+p = 1.88864527461e-07
+Exploitation
+Update called by 11
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 12
+Exploration
+avg = 3.92384558603e-07
+p = 9.33567347548e-07
+Exploitation
+Exploitation
+Update called by 13
+Exploitation
+Exploration
+avg = 1.22356187123e-07
+p = 1.86883732143e-07
+Exploitation
+Update called by 14
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 15
+Exploitation
+Exploration
+avg = 1.22356196374e-07
+p = 1.86883750645e-07
+Exploration
+avg = 8.53825136612e-07
+Update called by 16
+Exploitation
+Exploration
+avg = 1.21032100257e-07
+p = 1.84442829529e-07
+Exploration
+avg = 9.33567347548e-07
+Update called by 17
+Exploitation
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 18
+Exploration
+avg = 3.67129772552e-07
+p = 8.53825136612e-07
+Exploitation
+Exploration
+avg = 9.33567347548e-07
+Update called by 19
+Best: [2, 1, 0, 3], 5313, 12, 5333
+Colony Path
+
+------------------------------------------------------------
+                     Results                                
+------------------------------------------------------------
+
+Best path = [2, 1, 0, 3]
+Kirkenes  Hammerfest  Bergen  Kristiansand  
+Best path cost = 5313
+

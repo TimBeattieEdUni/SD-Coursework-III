@@ -231,6 +231,7 @@ def main(argv):
     # check for optional random seed argument and apply if found
     if 4 == len(argv):
         seed = argv[3]
+        print("seeding random number generator with value " + seed)
         random.seed(seed)
 
     if len(argv) >= 3 and argv[0]:

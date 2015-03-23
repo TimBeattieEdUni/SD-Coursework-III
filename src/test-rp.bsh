@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Test script for repeatability.
+# Runs the solver twice and verifies output and solution are identical.
+# Repeats this for multiple sets of command-line arguments.
+
+# @todo Make this usable with "make check" by setting exit code according to diff results.
+
+infile=citiesAndDistances.pickled
+
+# test with different numbers of cities
+for cities in `seq 9 10`;
+do
+	# test with different seeds
+	for seed in 1234567 2345678
+	do
+		# do two runs and compare results
+		logfile1=output-$cities-$seed-1.log
+		logfile2=output-$cities-$seed-2.log
+		solfile1=solution-$cities-$seed-1.pickled
+		solfile2=solution-$cities-$seed-2.pickled
+
+		# run twice
+		python tsp.py $cities $infile $solfile1 $seed > $logfile1 2>&1
+		python tsp.py $cities $infile $solfile2 $seed > $logfile2 2>&1
+
+		# verify the output is unchanged
+		diff $logfile1 $logfile2
+		diff $solfile1 $solfile2
+	done
+done
