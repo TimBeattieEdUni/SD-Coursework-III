@@ -225,15 +225,44 @@ import sys
 import traceback
 
 
+def PrintUsage():
+    print("usage: " + sys.argv[0] + " <cities> <citiesfile> <solutionfile> [<seed>]")
+    print("where:")
+    print("    <cities>        is the number of cities to visit.")
+    print("    <citiesfile>    is a \"pickle\" file containing cities and distances.")
+    print("    <solutionfile>  is the file to write the solution to.")
+    print("    <seed>          is an optional seed for the random number generator.")
+
+
 def main(argv):
-    nm = 10
+    # check number of command line arguments
+    if len(argv) > 4 or len(argv) < 3:
+        PrintUsage()
+        sys.exit(-1)
+    
+    # check input file exists
+    infilename = argv[1]
+    try:
+        infile = open(infilename, "r")
+    except:
+        print("error: unable to open input file " + infilename)
+        sys.exit(-1)
+
+	# check output file can be opened
+    outfilename = argv[2]
+    try:
+        outfile = open(outfilename, 'w+')
+    except:
+        print("error: unable to open output file " + infilename)
+        sys.exit(-1)
 
     # check for optional random seed argument and apply if found
     if 4 == len(argv):
         seed = argv[3]
         print("seeding random number generator with value " + seed)
         random.seed(seed)
-
+        
+    nm = 10
     if len(argv) >= 3 and argv[0]:
         nm = int(argv[0])
 
@@ -246,7 +275,8 @@ def main(argv):
         ni = 20
         nr = 1
 
-    stuff = pickle.load(open(argv[1], "r"))
+	# load cities and distances
+    stuff = pickle.load(infile)
     cities = stuff[0]
     cm = stuff[1]
     #why are we doing this?
@@ -282,7 +312,7 @@ def main(argv):
             city_vec.append(cities[node])
         print "\nBest path cost = %s\n" % (bpc,)
         results = [bpv, city_vec, bpc]
-        pickle.dump(results, open(argv[2], 'w+'))
+        pickle.dump(results, outfile)
     except Exception, e:
         print "exception: " + str(e)
         traceback.print_exc()
