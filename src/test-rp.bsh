@@ -15,16 +15,16 @@ do
 	for seed in 1234567 2345678
 	do
 		# do two runs and compare results
-		logfile1=output-$cities-$seed-1.log
-		logfile2=output-$cities-$seed-2.log
-		solfile1=solution-$cities-$seed-1.pickled
-		solfile2=solution-$cities-$seed-2.pickled
+		logfile1=test-rp-output-$cities-$seed-1.log
+		logfile2=test-rp-output-$cities-$seed-2.log
+		solfile1=test-rp-solution-$cities-$seed-1.pickled
+		solfile2=test-rp-solution-$cities-$seed-2.pickled
 
 		# run twice
 		python tsp.py $cities $infile $solfile1 $seed > $logfile1 2>&1
 		python tsp.py $cities $infile $solfile2 $seed > $logfile2 2>&1
 
-		# verify the output is unchanged
+		# verify the results are identical
 		diff $logfile1 $logfile2
 		diff $solfile1 $solfile2
 	done

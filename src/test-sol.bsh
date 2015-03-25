@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Test script for solution.
+# Runs the solver and diffs the resulting solution with a reference solution
+# obtained with the same command-line arguments.
+
+infile=citiesAndDistances.pickled
+
+refsolfile="reference/solution-000-original.pickled"
+
+cities=10
+seed=1234567
+
+solfile=test-sol-$cities-$seed.pickled
+outfile=test-sol-$cities-$seed.log
+
+python tsp.py $cities $infile $solfile $seed > $outfile 2>&1
+diff $refsolfile $solfile
