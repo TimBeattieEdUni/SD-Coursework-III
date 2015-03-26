@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Test script for solution.
+# Test script for solution correctness.
 # Runs the solver and diffs the resulting solution with a reference solution
 # obtained with the same command-line arguments.
 
