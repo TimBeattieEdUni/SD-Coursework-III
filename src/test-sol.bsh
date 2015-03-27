@@ -6,7 +6,7 @@
 
 infile=citiesAndDistances.pickled
 
-refsolfile="reference/solution-000-original.pickled"
+refsolfile="reference/original-solution-10-noseed.pickled"
 
 cities=10
 seed=1234567
