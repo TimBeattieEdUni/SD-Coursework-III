@@ -21,8 +21,8 @@ do
 		solfile2=test-rp-solution-$cities-$seed-2.pickled
 
 		# run twice
-		python tsp.py $cities $infile $solfile1 $seed > $logfile1 2>&1
-		python tsp.py $cities $infile $solfile2 $seed > $logfile2 2>&1
+		python tsp.py $cities $infile $solfile1 $seed > $logfile1
+		python tsp.py $cities $infile $solfile2 $seed > $logfile2
 
 		# verify the results are identical
 		diff $logfile1 $logfile2

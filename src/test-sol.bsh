@@ -14,5 +14,5 @@ seed=1234567
 solfile=test-sol-$cities-$seed.pickled
 outfile=test-sol-$cities-$seed.log
 
-python tsp.py $cities $infile $solfile $seed > $outfile 2>&1
+python tsp.py $cities $infile $solfile $seed > $outfile
 diff $refsolfile $solfile

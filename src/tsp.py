@@ -1,13 +1,24 @@
 import math
 import random
 
-class Work():
+class Ant():
+    """
+        Implements an "ant" which wanders randomly along paths obtained from its colony.
+        Part of an "Ant Colony" algorithm for finding paths through graphs.
+        For algorithm detail and descriptions of variable meanings, see this link:
+        http://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms
+    """
     def __init__(self, ID, start_node, colony):
+        """
+            Initialises the ant at a node in the matrix.
+            Stores a reference to the colony for updates and matrix access.
+            TODO: Not yet clear what variable ntv is.
+        """
         self.ID = ID
         self.start_node = start_node
-        self.grouping = colony
+        self.colony = colony
         self.curr_node = self.start_node
-        self.graph = self.grouping.graph
+        self.graph = self.colony.graph
         self.path_vec = []
         self.path_vec.append(self.start_node)
         self.path_cost = 0
@@ -22,10 +33,14 @@ class Work():
         for i in range(0, self.graph.num_nodes):
             self.path_mat.append([0] * self.graph.num_nodes)
 
-    #could this be simpler?
     def run(self):
-        graph = self.grouping.graph
-        while not self.end():
+        """
+            Walks the ant through all nodes in the graph, recording the path it takes.
+            Updates the colony when done.
+            TODO: Not yet clear why this function resets the object when done.
+        """
+        graph = self.colony.graph
+        while self.ntv:
             new_node = self.state_transition_rule(self.curr_node)
             self.path_cost += graph.delta(self.curr_node, new_node)
             self.path_vec.append(new_node)
@@ -33,15 +48,11 @@ class Work():
             self.local_updating_rule(self.curr_node, new_node)
             self.curr_node = new_node
         self.path_cost += graph.delta(self.path_vec[-1], self.path_vec[0])
-        self.grouping.update(self)
-        self.__init__(self.ID, self.start_node, self.grouping)
-
-    def end(self):
-        return not self.ntv
-
+        self.colony.update(self)
+        self.__init__(self.ID, self.start_node, self.colony)
 
     def state_transition_rule(self, curr_node):
-        graph = self.grouping.graph
+        graph = self.colony.graph
         q = random.random()
         max_node = -1
         if q < self.Q0:
@@ -82,7 +93,7 @@ class Work():
 
     def local_updating_rule(self, curr_node, next_node):
         #Update the pheromones on the tau matrix to represent transitions of the ants
-        graph = self.grouping.graph
+        graph = self.colony.graph
         val = (1 - self.Rho) * graph.tau(curr_node, next_node) + (self.Rho * graph.tau0)
         graph.update_tau(curr_node, next_node, val)
 
@@ -93,14 +104,14 @@ import sys
 
 
 class AntColony:
-	"""
-		Manages a set of ants which do the exploring and gathers their results.
-	"""
+    """
+        Manages a set of ants which do the exploring and gathers their results.
+    """
     def __init__(self, graph, num_ants, num_iterations):
-		"""
-			Stores the given parameters and resets the object.
-			TODO: Not yet clear what Alpha is.
-		"""
+        """
+            Stores the given parameters and resets the object.
+            TODO: Not yet clear what Alpha is.
+        """
         self.graph = graph
         self.num_ants = num_ants
         self.num_iterations = num_iterations
@@ -124,10 +135,10 @@ class AntColony:
             self.pheromone_update()
 
     def iteration(self):
-		"""
-			Resets average calculation and runs all ants.
-			Ants will call this class's update() method.
-		"""
+        """
+            Resets average calculation and runs all ants.
+            Ants will call this class's update() method.
+        """
         self.avg_path_cost = 0
         self.ant_counter = 0
         self.iter_counter += 1
@@ -135,9 +146,9 @@ class AntColony:
             ant.run()
 
     def update(self, ant):
-		"""
-			Called by ants to report their results.
-		"""
+        """
+            Called by ants to report their results.
+        """
         print "Update called by %s" % (ant.ID,)
         self.ant_counter += 1
         self.avg_path_cost += ant.path_cost
@@ -151,14 +162,14 @@ class AntColony:
                 self.best_path, self.best_path_cost, self.iter_counter, self.avg_path_cost,)
 
     def create_ants(self):
-		"""
-			Initialises the set of ants.
-			TODO: This probably doesn't need to be a separate function.
-		"""
+        """
+            Initialises the set of ants.
+            TODO: This probably doesn't need to be a separate function.
+        """
         self.reset()
         ants = []
         for i in range(0, self.num_ants):
-            ant = Work(i, random.randint(0, self.graph.num_nodes - 1), self)
+            ant = Ant(i, random.randint(0, self.graph.num_nodes - 1), self)
             ants.append(ant)
         return ants
  
