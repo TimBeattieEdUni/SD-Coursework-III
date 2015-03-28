@@ -12,3 +12,6 @@
 
 # Program output
 *.log
+
+# Python compiled modules
+*.pyc
