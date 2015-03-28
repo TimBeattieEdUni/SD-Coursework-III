@@ -93,11 +93,14 @@ import sys
 
 
 class AntColony:
-    """
-        Stores the given parameters and resets the object.
-        TODO: Not yet clear what Alpha is.
-    """
+	"""
+		Manages a set of ants which do the exploring and gathers their results.
+	"""
     def __init__(self, graph, num_ants, num_iterations):
+		"""
+			Stores the given parameters and resets the object.
+			TODO: Not yet clear what Alpha is.
+		"""
         self.graph = graph
         self.num_ants = num_ants
         self.num_iterations = num_iterations
