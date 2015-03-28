@@ -1,9 +1,17 @@
 
+"""
+    Uses an Ant Colony algorithm to solve the Travelling Salesman problem.
+    TODO: Pickle file format needs to be documented - or replaced with something simpler.
+"""
+
+
+# Standard modules
 import pickle
 import random
 import sys
 import traceback
 
+# Local modules
 import Ants
 
 

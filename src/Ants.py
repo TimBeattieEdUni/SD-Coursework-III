@@ -1,12 +1,20 @@
+"""
+    Provides an implementation of the "Ant Colony" algorithm for 
+    determining good paths through graphs.
+    
+    For algorithm detail and descriptions of variable meanings, see this link:
+    http://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms
+"""
+
+
 import math
 import random
+import sys
+
 
 class Ant():
     """
         Implements an "ant" which wanders randomly along paths obtained from its colony.
-        Part of an "Ant Colony" algorithm for finding paths through graphs.
-        For algorithm detail and descriptions of variable meanings, see this link:
-        http://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms
     """
 
     def __init__(self, ID, start_node, colony):
@@ -36,8 +44,7 @@ class Ant():
     def run(self):
         """
             Walks the ant through all nodes in the graph, recording the path it takes.
-            Updates the colony when done.
-            TODO: Not yet clear why this function resets the object when done.
+            Passes results to the colony when done, then resets itself for next use.
         """
         graph = self.colony.graph
         while self.nodes_to_visit:
@@ -104,10 +111,6 @@ class Ant():
         graph.update_tau(curr_node, next_node, val)
 
 
-import random
-import sys
-
-
 class Colony:
     """
         Manages a set of ants which do the exploring and gathers their results.
@@ -169,7 +172,6 @@ class Colony:
     def create_ants(self):
         """
             Initialises the set of ants.
-            TODO: This probably doesn't need to be a separate function.
         """
         self.reset()
         ants = []
