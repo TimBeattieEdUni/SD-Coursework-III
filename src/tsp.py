@@ -92,7 +92,11 @@ import sys
 
 
 
-class BigGroup:
+class AntColony:
+    """
+        Stores the given parameters and resets the object.
+        TODO: Not yet clear what Alpha is.
+    """
     def __init__(self, graph, num_ants, num_iterations):
         self.graph = graph
         self.num_ants = num_ants
@@ -101,73 +105,68 @@ class BigGroup:
         self.reset()
 
     def reset(self):
-        self.bpc = sys.maxint
-        self.bpv = None
-        self.bpm = None
-        self.lbpi = 0
+        """
+            Clears all values obtained from previous calculations.
+        """
+        self.best_path_cost = sys.maxint
+        self.best_path = None
+        self.best_path_matrix = None
 
-    def start(self):
-        self.ants = self.c_workers()
+    def run(self):
+        """Creates the set of ants and runs the colony."""
+        self.ants = self.create_ants()
         self.iter_counter = 0
-
         while self.iter_counter < self.num_iterations:
             self.iteration()
-            # Note that this will help refine the results future iterations.
-            self.global_updating_rule()
+            self.pheromone_update()
 
     def iteration(self):
+		"""
+			Resets average calculation and runs all ants.
+			Ants will call this class's update() method.
+		"""
         self.avg_path_cost = 0
         self.ant_counter = 0
         self.iter_counter += 1
         for ant in self.ants:
             ant.run()
 
-    def num_ants(self):
-        return len(self.ants)
-
-    def num_iterations(self):
-        return self.num_iterations
-
-    def iteration_counter(self):
-        return self.iter_counter
-
     def update(self, ant):
+		"""
+			Called by ants to report their results.
+		"""
         print "Update called by %s" % (ant.ID,)
         self.ant_counter += 1
         self.avg_path_cost += ant.path_cost
-        if ant.path_cost < self.bpc:
-            self.bpc = ant.path_cost
-            self.bpm = ant.path_mat
-            self.bpv = ant.path_vec
-            self.lbpi = self.iter_counter
+        if ant.path_cost < self.best_path_cost:
+            self.best_path_cost = ant.path_cost
+            self.best_path_matrix = ant.path_mat
+            self.best_path = ant.path_vec
         if self.ant_counter == len(self.ants):
             self.avg_path_cost /= len(self.ants)
             print "Best: %s, %s, %s, %s" % (
-                self.bpv, self.bpc, self.iter_counter, self.avg_path_cost,)
+                self.best_path, self.best_path_cost, self.iter_counter, self.avg_path_cost,)
 
-
-    def done(self):
-        return self.iter_counter == self.num_iterations
-
-    def c_workers(self):
+    def create_ants(self):
+		"""
+			Initialises the set of ants.
+			TODO: This probably doesn't need to be a separate function.
+		"""
         self.reset()
         ants = []
         for i in range(0, self.num_ants):
             ant = Work(i, random.randint(0, self.graph.num_nodes - 1), self)
             ants.append(ant)
-
         return ants
  
-    def global_updating_rule(self):
-        #can someone explain this
-        evaporation = 0
-        deposition = 0
+    def pheromone_update(self):
+        """Updates matrix of path pheromone levels."""
         for r in range(0, self.graph.num_nodes):
             for s in range(0, self.graph.num_nodes):
                 if r != s:
-                    delt_tau = self.bpm[r][s] / self.bpc
+                    delta_tau = self.best_path_matrix[r][s] / self.best_path_cost
                     evaporation = (1 - self.Alpha) * self.graph.tau(r, s)
-                    deposition = self.Alpha * delt_tau
+                    deposition = self.Alpha * delta_tau
                     self.graph.update_tau(r, s, evaporation + deposition)
 
 class GraphBit:
@@ -294,16 +293,16 @@ def main(argv):
         best_distance = sys.maxint
 
         graph.reset_tau()
-        workers = BigGroup(graph, num_ants, num_iters)
+        workers = AntColony(graph, num_ants, num_iters)
         
-        print "Colony Started"
+        print "Colony created"
 
         # run the calculation
-        workers.start()
-        if workers.bpc < best_distance:
+        workers.run()
+        if workers.best_path_cost < best_distance:
             print "Colony Path"
-            best_path_indices = workers.bpv
-            best_distance = workers.bpc
+            best_path_indices = workers.best_path
+            best_distance = workers.best_path_cost
 
         # print results
         print "\n------------------------------------------------------------"
