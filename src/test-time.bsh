@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Test script for timing.
+# Runs the solver 100 times
+# Run with "time ./test-time.bsh" to obtain timings.
+
+infile=citiesAndDistances.pickled
+
+# test with different numbers of cities
+for run in `seq 1 5`;
+do
+	for cities in `seq 6 10`;
+	do
+		# test with different seeds
+		for seed in 123 2345 34567 456789 
+		do
+			# prep file names
+			logfile=test-time-output-$cities-$seed-$run.log
+			solfile=test-time-solution-$cities-$seed-$run.pickled
+
+			# run the script
+			python tsp.py $cities $infile $solfile $seed > $logfile
+		done
+	done
+done
