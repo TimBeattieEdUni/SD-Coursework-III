@@ -1,7 +1,8 @@
 #!/bin/bash
 
+# Important: This script does not work on the CPLABS machines!
+
 # Runs program twice using Python's profiler to produce lists of functions which
 # are called most often and which take the most time.
 
-python -m cProfile -s ncalls  tsp.py 10 citiesAndDistances.pickled test-tmp.pickled 12345 > ncalls1.profile
-python -m cProfile -s tottime tsp.py 10 citiesAndDistances.pickled test-tmp.pickled 12345 > tottime1.profile
+python -m cProfile tsp.py 10 citiesAndDistances.pickled test-tmp.pickled 12345 > tsp.profile
