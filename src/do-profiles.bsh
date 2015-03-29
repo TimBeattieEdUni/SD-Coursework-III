@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Important: This script does not work on the CPLABS machines!
+# Runs program using Python's profiler.
 
-# Runs program twice using Python's profiler to produce lists of functions which
-# are called most often and which take the most time.
+# Note: This script used to run the program twice to get output sorted by total 
+# time and number of calls, but sorting options appear to be broken on CPLABS.
 
 python -m cProfile tsp.py 10 citiesAndDistances.pickled test-tmp.pickled 12345 > tsp.profile
