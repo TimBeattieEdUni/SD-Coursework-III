@@ -59,8 +59,7 @@ def main(argv):
         random.seed(seed)
 
     # configuration
-    # leaving these magic numbers in place for now until they're understood better
-    
+    # TODO: Make these optional command-line arguments.
     if num_cities <= 10:
         num_ants = 20
         num_iters = 12
@@ -72,6 +71,11 @@ def main(argv):
     city_data = pickle.load(infile)
     cities = city_data[0]
     city_matrix = city_data[1]
+
+    # sanity check number of cities
+    if num_cities > len(city_matrix):
+        num_cities = len(city_matrix)
+        print("warning: database only contains " + str(num_cities) + " cities")
 
     # truncate the city matrix to just those cities we'll be visiting
     if num_cities < len(city_matrix):
