@@ -3,5 +3,5 @@
 # Removes all test output.
 # This is not done by the tests themselves because sometimes we want to look at their output.
 
-rm test*.log
-rm test*.pickled
+rm -f test*.log
+rm -f test*.pickled
