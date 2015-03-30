@@ -28,8 +28,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Components.
-\title{Software Development Coursework Part II}
-\author{B063622}
+\title{Software Development Coursework Part III}
+\author{Tim Beattie}
 \date{\today}
 
 
@@ -51,14 +51,205 @@
 \pagenumbering{arabic}  % Body of report numbered in Arabic.
 
 \section{Introduction}
-This section is the introduction.
+The following report describes the refactoring of a code which solves the Travelling Salesman problem using an "Ant Colony" algorithm.
+A description of the changes which were made to improve the code is given, referring to a previous report in which this refactoring was planned \cite{ref:Part-I}.
+This is followed by a discussion of how the work differed from what was planned and several suggestions for further improvements to the code.
 
-\newpage
+The code is stored in a Git repository on GitHub and can be obtained by running the following command:
 
-\section{Another Section}
-This is another section.
+git clone git@github.com:TimBeattieEdUni/SD-Coursework-III.git
 
-\section{Conclusion}
-This section is the conclusion.
+\section{Summary of Changes to the Code}
+In \cite{ref:Part-I} we described a plan for making several proposed changes to the code.
+These included improvements to reproducibility, readability, command-line argument handling, error handling, and performance.
+We describe here the process of following that plan and how the reality of working on the code - both the set of changes and the order in which they were to be done - inevitably differed from the plan.
+
+\subsection{Reproducibility}
+
+In accordance with the original plan, making the program's output reproducible was the first change to be made.
+As described in \cite{ref:Part-I} having a repeatable test for correctness of the program's output after each modification to the code enabled all other changes to be made with confidence that the code was still correct, or with immediate discovery of any mistake.  
+
+The program was made repeatable by implementing an optional command-line argument which was used as a seed for the system's random number generator.
+Two runs of the program with identical seeds would then produce identical outputs.
+Implementing this took less than the hour which was allocated in \cite{ref:Part-I} and was done in less than half a dozen lines of code.
+
+\subsection{Addition of Testing}
+As soon as the program had been made reproducible, the solution it produced for a search of 10 cities was stored for correctness testing.
+As the Python {\em random} module automatically seeds the random number generator with the current time if no seed is provided, the program had been running up until that point with various values for the seed.
+For this reason, there was high confidence that the solution would still be correct and that implementing seeding would not have broken the code.
+
+Two tests were implemented in Bash scripts at this point: one for solution correctness in {\em "test-sol.bsh"} and one for repeatability in {\em "test-rp.bsh"}.
+The correctness test ran the program once with a fixed set of arguments and compared the solution with a reference solution produced by the seeded program with the same command line arguments.
+This test ignored the program's output to stdout.
+
+The repeatability test set up various command lines for the program and ran each one twice, comparing the two sets of program output and solution.
+Values for the number of cities and the random seed were chosen at random and left unchanged throughout development.
+More different sets of values would have tested more thoroughly, but it was considered important that the test would run quickly so that development could proceed without interruption.
+
+The correctness test automated checking whether a given solution was identical to the reference one.
+However, when an algorithm which finds "good" solutions rather than "correct" ones, a different solution isn't' necessarily wrong.
+If a solution differed from the reference one, it was checked manually to see if it was approximately as good or better.
+This called for human judgement about whether or not the code had been broken.
+In other words, while the test for correctness saved a great deal of time, it wasn't completely automated.
+
+As it turned out, there was a flaw in the test for repeatability which allowed an uncaught exception from the program to go unnoticed for several hours.
+The problem and its fix are described in Section \ref{subsec:TestFail}.
+
+Implementing the tests for correctness and repeatability took approximately another hour, and this had not been planned in \cite{ref:Part-I}.
+The tests saved significantly more time than they cost, but it is worth noting that planning for their implementation was neglected.
+The tests produced significant numbers of output and solution files; it would have been better if each test run cleaned up the output from the previous one.
+
+\subsection{Using Tests During Development}
+Once the basic tests for correctness and repeatability were in place, we had a development process: we could implement a change to the code, use the tests to verify the program was correct, then commit to the repository, consider a task completed and move on to the next task.  Running the tests before every commit ensured that the repository would normally be in a correct state and that a past snapshot retrieved from the repository could generally be relied on to work correctly.  As described in Section \ref{subsec:TestFail} an error did get past this checking and into the repository, but in general our confidence in the commits in the repository is high.
+
+The test scripts produced many output files, so a script was written {\em "test-clean.bsh"} to remove these.
+This cleanup was done manually.
+This could have been improved by making the tests remove any previous test output, or by using a separate subdirectory for test output.
+However, once a working test was in place, it was considered a higher priority to perform the code improvements than to perfect the tests.
+
+\subsection{Command Line Checking}
+The checking of command line arguments was implemented next.
+This was not as planned, but as the implementation of reproducibility involved modifying the code which handled arguments and therefore learning that part of the code well, it was considered best to make this change next.
+The code was modified to verify that the number of command line arguments was sensible, that the input file existed, and that the output file could be opened for writing.
+Informative error messages were added where arguments turned out to be unusable.
+If the number of arguments was wrong, a new function PrintUsage() was called to inform the user of what the program was expecting.
+
+Command line argument checking was tested manually as its code was both simple and well-separated from other code in the program.
+This meant that future changes to other code were unlikely to break argument checking, and a quick manual test was considered sufficient.
+
+Some i/o error handling was implemented as part of the command line argument checking code instead of later as was planned in \cite{ref:Part-I}.
+This was because the simplest way to verify that a file could be opened was to open it and detect any error.
+Once the file was opened, closing it only to open it would be more work and would make it possible for the file to become unavailable between the test open and the useful open, thus defeating the test.
+
+\subsection{Readability}
+Improving the code’s readability was the longest task so far, largely because it required an understanding of the code.
+The details of the Ant Colony algorithm were not apparent and were not fully understood by the time the task was considered complete, but most of the code was improved.
+Variable and class names were modified, comments were added, dead code was removed, and cosmetic changes were made to give all of the code a consistent appearance.
+
+\subsubsection{Comments and Docstrings}
+Python docstrings were used to document functions, classes, and modules as they are a built-in language feature and they actually become part of the object being documented.
+Where anything was unclear or unfinished, the word {\em "TODO"} was placed in comment.
+This is an easy and quick way to make notes in the code which then become easy to search for and count using command line utilities.  
+For example, {\em "grep TODO *.py $|$ wc -l"} will count the number of {\em "TODO"} comments in all files ending in {\em .py} in the current directory.
+A link to the Wikipedia article on Ant Colony algorithms was added to enable the reader to quickly find a resource for further understanding of the algorithm.
+
+\subsubsection{Removal of Dead Code}
+Several functions and variables were removed as they were "dead code" - code which was never called.
+While it is possible that future users of the code involved might want to use some of these functions, it was considered best to remove them as every line of code has a maintenance cost.
+Most of the functions were quite simple and would therefore be easy to reinstated if necessary.  
+
+Dead code was generally removed during other tasks, rather than as a distinct task of its own.
+This was because there was no reason to refrain from removing code as soon as it was discovered to be unused; there was an immediate improvement in readability, which made other tasks easier.
+The following is a partial list of functions and variables which were removed:
+\begin{itemize}
+\item BigGroup.iteration\_counter()
+\item BigGroup.num\_iterations()
+\item BigGroup.num\_ants()
+\item BigGroup.done()
+\item BigGroup.lbpi
+\item GraphBit.average\_tau()
+\item GraphBit.average\_delta() (only used once and didn't really need to be a separate function)
+\item In main() variable nr - "number of repetitions" - was always 1 and was therefore unnecessary.
+\end{itemize}
+
+In addition to removing code which wasn't used, the various duplicate {\em "import"} statements were moved to the top of the file and duplicates were removed.
+
+\subsubsection{Renaming identifiers}
+
+Many variable names were very short and uninformative.
+We followed a simple convention: where a variable represented the number of something, the first part of its name would be {\em "num\_"}.
+For example, {\em "num\_cities"} for the number of cities, and {\em "num\_iters"} for the number of iterations.
+
+Class {\em "BigGroup"} was renamed to {\em "AntColony"} and class {\em "Work"} was renamed to {\em "Ant"} in order to match the terminology of the algorithm.
+The variable {\em "bpc"}, which presumably stood for "best path cost", was renamed to {\em "best\_distance"} in main() as the algorithm was being used to calculate a journey distance but renamed to {\em "best\_path\_cost"} within the algorithm classes as they solve a more general problem which could have any kind of cost: travel distance between cities, energy levels in physics, etc.
+
+In the constructor for class {\em "GraphBit"} it was found that the argument {\em "num\_nodes"} wasn't needed as it must always be equal to the length of the delta matrix.
+The code was raising an exception if the two values were not equal.
+This was modified to simply use the size of the delta matrix as the number of cities.
+This both simplified the code and eliminated an opportunity for programmer error.
+
+Several other functions were renamed to make their meanings clear: 
+\begin{itemize}
+\item Function c\_workers() was renamed to create\_workers().
+\item Colony.global\_updating\_rule() was renamed to pheromone\_update() to match the algorithm's terminology.
+\item Colony.start() was renamed renamed to run() as it doesn't just start the algorithm; the algorithm will have completed by the time this function returns.
+\end{itemize}
+
+\subsection{I/O Error Handling}
+
+Each attempt to open a file for i/o was placed in a Python {\em "try/except"} block.
+Any failure to open one of the files needed by the code was reported to the user with a clear error message, and the program was then exited.
+
+Further error checking on each attempt to read or write the {\em "pickle"} format was not added; this was already handled by the {\em "try/except"} block in main() which was considered informative enough; any user able to diagnose errors in the pickle data format would probably be advanced enough to understand the Python traceback information.
+
+\subsection{Performance}
+
+For performance testing, a test script {\em "test-time.bsh"} was added to produce a timing measurement for several runs of the program.
+
+An attempt was made to improve the program’s performance by moving the Ant Colony algorithm classes to a Python module so they could be byte-compiled and optimised by the Python engine.
+This improved program runtime on the CPLABS machines from approximately 11.7 seconds to 11.35 (several runs re performed and the average time was calculated.)
+This represents an improvement of approximately 3\%.
+
+The final version of the program was also profiled by running it with {\em "python -m cProfile tsp.py …"} to list the times spent in each function and the total number of calls to each function.
+The output from profiling with {\em "python -m cProfile -s tottime tsp.py …"} and {\em "python -m cProfile -s ncalls tsp.py …"} was recorded in the files {\em tottime.profile} and {\em ncalls.profile}, respectively.
+(Note that for reasons which aren't clear, these options do not work on the CPLABS machines which have Python 2.6 installed; profiling was done on a laptop with Python 2.7.)
+This suggested that the functions {\em "tau()"}, {\em "etha()"}, and {\em "delta()"} in class GraphBit might be good candidates for optimisation as they were called approximately 63,000 times in total during a run on 10 cities, representing significant function call overhead.
+These functions each perform a simple matrix lookup (and a division in the case of {\em "etha()"}) and so are good candidates for inlining.
+However, there was insufficient time for this after the other modifications to the code.
+
+\subsection{Bugs}
+During the previous work, it was discovered that there was a bug in the program’s original command line argument checking: the number of cities to visit was read from the array of arguments only if the number of arguments was three or more.  This meant that if the user omitted the output file name, the first argument which was intended to be the number of cities would be used as the input file name.  The program would fail to run either way, but the resulting error message would have been confusing.  This was fixed by making the program always require a number of cities to visit.
+
+\section{Reflections on the Process}
+With a few exceptions, the original plan for modifying the code was followed, and the time estimates proved to be reasonably accurate.
+(In the case of readability and performance, the task was considered complete when the planned time had been spent, so those estimates were accurate due to the decision to halt work rather than any measure of completeness.)
+As expected, during the process of learning the code in order to make the planned changes, new problems and fixes were identified.
+During the first assignment it was stated that there was no need to understand the Ant Colony algorithm in order to make the plan, so the code which implemented the low-level mechanisms of the algorithm was not studied in detail.  
+This code was studied more closely for this work, and so new problems were found and fixes implemented.
+
+As was also expected, each small change to the code, whether renaming an unclear variable or removing unused code, improved the code’s readability and the ease with which the code could be learned and new improvements could be conceived.
+In future we would suggest making readability changes almost immediately instead of trying to identify problems in code which is still hard to read.
+At the point where a identifier’s meaning is understood, the best place to record that information is probably in the code itself - by changing the name.
+
+\subsection{Test Failure}
+\label{subsec:TestFail}
+
+The use of testing to ensure the program was still correct after a change to the code was extremely beneficial, but there was a failure in the test at one point, and this exposed out reliance on the correctness of the test.
+
+The editor used to work on the code inadvertently added several tabs for indentation where spaces were being used.
+This caused the program to be broken, but the test scripts were redirecting all output including errors to the log file using {\em "2\textgreater\&1"}.
+The tests were assumed to be successful if they produced no output, so this redirect was a bug in the tests scripts.
+It is believed that the code in the Git repository was not broken for more than a few hours, but significant time could have been lost to this.
+The tests were fixed by removing the redirect.
+
+\section{Future enhancements}
+The following three improvements to the code are proposed.
+
+\subsection{Improving command line configurability}
+The code would benefit from the use of the Python {\em getopt} or {\em optparse} modules to enable more sophisticated command line argument handling.
+Either of these modules would enable arguments to be specified explicitly, eliminating any ambiguity about which was which.
+Arguments could also be given in any order, and any argument could be made optional, with the program using default values for any which weren't specified.
+The random seed is currently the only optional argument, but the output file and the number of cities could be made optional as well to make the program more flexible and useful.
+
+\subsection{Reducing debug output}
+The program currently writes a great deal of debug information to stdout.
+Developers and advanced users may be interested in this, but most users probably only want to see the solution.
+Removing this debug output but adding an optional command line argument to switch it back on again would satisfy both types of users.
+Removing the debug output would enable a task which was proposed in \cite{ref:Part-I}: making the program write its solution to stdout by default as is the convention on Unix systems.
+
+\subsection{Improving Data Handling}
+The database of cities and distances which is passed to and read from the pickle module has a structure which must be understood by any code using that format: the list of city names is stored first, followed by a matrix of city-to-city journey distances.
+This structure is handled directly by the code in {\em main()}, and this represents a failure of abstraction as the developer has to know the details of the data format in order to work with it.  
+
+It would be better to have this data format handled within a class of its own, which would be the only place where knowledge of the format would be required.
+Code which used the class could then pass a file name to the class and ask the class to load or store the database using that file.
+The class could then provide functions to store or retrieve the list of cities and the distance matrix, meaning code using the class could work with just this data without having to worry about how it is stored in a file.
+This would make loading and storing the database easier to do correctly and difficult to get wrong.
+
+\begin{thebibliography}{100}
+
+\bibitem{ref:Part-I} T.Beattie. {\em 2015 Software Development Coursework Part I.} University of Edinburgh.
+
+\end{thebibliography}
 
 \end{document}
